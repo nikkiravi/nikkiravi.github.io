@@ -1,7 +1,447 @@
 <!DOCTYPE html>
-<html>
-    <head>Nikita Ravi</head>
-    <h1>NIKITA RAVI</h1>
-    <h2>Software Engineer Intern at Salesforce</h2>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita Ravi | Software Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <!-- Replace with your actual profile image -->
+                    <img src="assets/profile.jpg" alt="Nikita Ravi">
+                </div>
+                <div class="profile-info">
+                    <h1>Nikita Ravi</h1>
+                    <h2>Software Engineer | AI/ML Specialist</h2>
+                    <div class="contact-links">
+                        <a href="mailto:nikkiravi@yahoo.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i> nikkiravi@yahoo.com
+                        </a>
+                        <a href="tel:+17654142419" aria-label="Phone">
+                            <i class="fas fa-phone"></i> (765)-414-2419
+                        </a>
+                        <a href="https://github.com/nikkiravi" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i> github.com/nikkiravi
+                        </a>
+                        <a href="https://linkedin.com/in/nikitaravi0519" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i> linkedin.com/in/nikitaravi0519
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="assets/resume.pdf" download="Nikita_Ravi_Resume.pdf" class="download-btn">Download Resume</a></li>
+                </ul>
+                <div class="mobile-nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
 
+    <main>
+        <section id="about" class="fade-in">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>I'm a Software Engineer with expertise in AI, Machine Learning, and Computer Vision. With a Master's in Computer Engineering from Purdue University, I leverage cutting-edge technologies to build intelligent solutions. Currently working at Salesforce, I develop AI agents and implement automated health monitoring systems to enhance customer experiences.</p>
+                <p>My background encompasses both software engineering and research, with experience in fine-tuning language models, developing computer vision pipelines, and creating reproducible ML solutions.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="slide-in">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="Python">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar"><div class="skill-level" style="width: 95%;"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="SQL">
+                                <span class="skill-name">SQL</span>
+                                <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="Java">
+                                <span class="skill-name">Java</span>
+                                <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="C">
+                                <span class="skill-name">C</span>
+                                <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="MATLAB">
+                                <span class="skill-name">MATLAB</span>
+                                <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="LaTeX">
+                                <span class="skill-name">LaTeX</span>
+                                <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Machine Learning</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="PyTorch">
+                                <span class="skill-name">PyTorch</span>
+                                <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="Tensorflow">
+                                <span class="skill-name">Tensorflow</span>
+                                <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="HuggingFace">
+                                <span class="skill-name">HuggingFace</span>
+                                <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="Langchain">
+                                <span class="skill-name">Langchain</span>
+                                <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="OpenCV">
+                                <span class="skill-name">OpenCV</span>
+                                <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="Git/GitHub">
+                                <span class="skill-name">Git/GitHub</span>
+                                <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="Docker">
+                                <span class="skill-name">Docker</span>
+                                <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="AWS Sagemaker">
+                                <span class="skill-name">AWS Sagemaker</span>
+                                <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                            </div>
+                            <div class="skill-item" data-skill="Unix Shell">
+                                <span class="skill-name">Unix Shell</span>
+                                <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <div class="skill-items language-items">
+                            <div class="language-badge">English</div>
+                            <div class="language-badge">Japanese</div>
+                            <div class="language-badge">Telugu</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="fade-in">
+            <div class="container">
+                <h2>Work Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">July 2024 - Present</div>
+                        <div class="timeline-content">
+                            <h3>Software Engineer</h3>
+                            <h4>Salesforce</h4>
+                            <ul>
+                                <li>Developed an AI agent that analyzes questions, retrieves relevant data/context, and delivers context-aware responses or visualizations, streamlining information access for customers.</li>
+                                <li>Implemented automated health checks in Python using SNMP to monitor network devices, detect issues, and trigger alerts for proactive maintenance.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">June 2023 - August 2023</div>
+                        <div class="timeline-content">
+                            <h3>Software Engineer Intern</h3>
+                            <h4>Salesforce</h4>
+                            <ul>
+                                <li>Fine-tuned an existing pre-trained causal LLM transformer for its text generation capabilities to answer any question pertaining to Salesforce's internal network health monitoring website.</li>
+                                <li>Experimented and fine-tuned different transformers like BERT, GPT2, Falcon, and Salesforce's own xgen models.</li>
+                                <li>Achieved an accuracy of 92.85%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">May 2022 - August 2022</div>
+                        <div class="timeline-content">
+                            <h3>Software Engineer Intern</h3>
+                            <h4>Salesforce</h4>
+                            <ul>
+                                <li>Trained a K-Means model to cluster network devices by their configurations using NLP TF-IDF computations.</li>
+                                <li>Displayed the clustering on a three-dimensional graph using a type of dimensionality reduction method called Principal Component Analysis.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">June 2021 - August 2021</div>
+                        <div class="timeline-content">
+                            <h3>DevOps Engineer Intern</h3>
+                            <h4>Lenovo</h4>
+                            <ul>
+                                <li>Implemented a software that effectively detects and redacts customer's PII and Lenovo's confidential data using Named Entity Recognition.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">January 2020 - August 2020</div>
+                        <div class="timeline-content">
+                            <h3>User and Customer Experience Co-Op</h3>
+                            <h4>Lenovo</h4>
+                            <ul>
+                                <li>Wrote Django-admin commands to manage and update information, and send notifications to users regarding the status of their parts in Lenovo's internal inventory tool.</li>
+                                <li>Developed an ETL script to load customer experience data into a SQL server and identify trends.</li>
+                                <li>Trained a decision-tree model to predict the probability of Lenovo's customer support case getting resolved.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="slide-in">
+            <div class="container">
+                <h2>Research Experience</h2>
+                <div class="research-items">
+                    <div class="research-item">
+                        <h3>SERIS Lab | Research Assistant</h3>
+                        <span class="date">August 2023 - May 2024</span>
+                        <ul>
+                            <li>Explored the reproducibility crisis and surveyed methodologies to enhance the reproducibility of training cutting-edge deep learning software.</li>
+                            <li>Improved the reproducibility of training and evaluating an efficient and low-powered computer vision model known as the Tree-Based Unidirectional Neural Network (TRUNK).</li>
+                        </ul>
+                    </div>
+                    <div class="research-item">
+                        <h3>Probabilistic and Understandable Machine Learning Lab | Research Assistant</h3>
+                        <span class="date">January 2022 - May 2022</span>
+                        <ul>
+                            <li>Constructed a StarCraft II Benchmark dataset that is easily accessible and useable for ML projects.</li>
+                            <li>Trained the ResNet-18 Network to predict the number of casualties from a specific frame of the game.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="fade-in">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="education-items">
+                    <div class="education-item">
+                        <div class="education-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Purdue_Signature.svg/1280px-Purdue_Signature.svg.png" alt="Purdue University">
+                        </div>
+                        <div class="education-info">
+                            <h3>Purdue University</h3>
+                            <p>M.S. Computer Engineering</p>
+                            <span class="date">August 2022 - May 2024</span>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Purdue_Signature.svg/1280px-Purdue_Signature.svg.png" alt="Purdue University">
+                        </div>
+                        <div class="education-info">
+                            <h3>Purdue University</h3>
+                            <p>B.S. Computer Engineering</p>
+                            <span class="date">August 2018 - December 2022</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="coursework">
+                    <h3>Relevant Coursework</h3>
+                    <div class="course-tags">
+                        <span class="course-tag">Artificial Intelligence</span>
+                        <span class="course-tag">Computer Vision</span>
+                        <span class="course-tag">Deep Learning</span>
+                        <span class="course-tag">Statistical Machine Learning</span>
+                        <span class="course-tag">Natural Language Processing</span>
+                        <span class="course-tag">Python for Data Science</span>
+                        <span class="course-tag">Data Structures and Algorithms</span>
+                        <span class="course-tag">Object Oriented Programming in Java</span>
+                        <span class="course-tag">Computer and Network Security</span>
+                        <span class="course-tag">Quantum Computing</span>
+                        <span class="course-tag">Random Variables and Signals</span>
+                        <span class="course-tag">Differential Equations</span>
+                        <span class="course-tag">Linear Algebra</span>
+                    </div>
+                </div>
+                
+                <div class="awards">
+                    <h3>Awards</h3>
+                    <div class="award-tags">
+                        <span class="award-tag">Dean's Honor List</span>
+                        <span class="award-tag">Semester Honors</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="slide-in">
+            <div class="container">
+                <h2>Publications</h2>
+                <div class="publication-items">
+                    <div class="publication-item">
+                        <h3>[In Progress] Improving the Reproducibility of Deep Learning Software: A Case Study Analysis</h3>
+                        <p class="authors">N. Ravi, A. Goel</p>
+                    </div>
+                    <div class="publication-item">
+                        <h3>Advancing Low-Power Computer Vision at the Edge</h3>
+                        <p class="authors">A. Goel, C. Tung, N. Eliopolous, N. Ravi, N. Synovic, I. Ahlgren, J. West, G. K. Thiravathukal, J. C. Davis, Y.-H. Lu</p>
+                        <a href="#" class="publication-link">[Link]</a>
+                    </div>
+                    <div class="publication-item">
+                        <h3>A Musician's Muse: Detecting Performance Errors with Transformers</h3>
+                        <p class="authors">B. Chou, P. Jajal, N. J. Eliopoulos, T. Nadolsky, C.-Y. Yang, N. Ravi, J. C. Davis, K. Y.-J. Yun, Y. Lu</p>
+                        <p class="publication-venue">AAAI Submission</p>
+                        <a href="#" class="publication-link">[Link]</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="fade-in">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/project-images/lunar-rover.jpg" alt="Lunar Rover Project">
+                        </div>
+                        <div class="project-info">
+                            <h3>Computer Vision Pipeline for the Lunar Rover</h3>
+                            <div class="project-tech">
+                                <span>PyTorch</span>
+                                <span>ROS</span>
+                                <span>Git</span>
+                                <span>Unix Shell</span>
+                            </div>
+                            <p>Developed a computer vision pipeline to transform lunar rover images into a bird's-eye view perspective, engineering a multi-step process involving image deblurring, semantic segmentation, and perspective transformation.</p>
+                            <div class="project-links">
+                                <!-- Add links when available -->
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/project-images/sentence-classifier.jpg" alt="Sentence Classifier Project">
+                        </div>
+                        <div class="project-info">
+                            <h3>Classifying Short Sentences</h3>
+                            <div class="project-tech">
+                                <span>PyTorch</span>
+                                <span>Git</span>
+                                <span>Unix Shell</span>
+                            </div>
+                            <p>Implemented a BiLSTM-based NLP model with attention mechanisms, linear, and convolutional layers for classifying short sentences, reproducing and optimizing an academic research paper.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/project-images/rogue-game.jpg" alt="Rogue Game Project">
+                        </div>
+                        <div class="project-info">
+                            <h3>Rogue Game</h3>
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>Git</span>
+                                <span>Unix Shell</span>
+                            </div>
+                            <p>Developed a text-based RPG inspired by the 1980 Rogue game, featuring procedural elements. Parsed XML files to extract and manage in-game data and integrated key bindings for movement and combat mechanics.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="#" class="project-link"><i class="fas fa-gamepad"></i> Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="slide-in">
+            <div class="container">
+                <h2>Certifications</h2>
+                <div class="certification-items">
+                    <div class="certification-item">
+                        <div class="certification-logo">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="certification-info">
+                            <h3>Google Generative AI Certification</h3>
+                            <span class="date">June 2023</span>
+                            <p>Covered LLMs, Attention Mechanisms, Intro to BERT</p>
+                        </div>
+                    </div>
+                    <div class="certification-item">
+                        <div class="certification-logo">
+                            <i class="fab fa-ibm"></i>
+                        </div>
+                        <div class="certification-info">
+                            <h3>IBM Data Science Professional Certification</h3>
+                            <span class="date">August 2019</span>
+                            <p>Covered Database and SQL, Data Analysis, and Machine Learning</p>
+                        </div>
+                    </div>
+                    <div class="certification-item">
+                        <div class="certification-logo">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="certification-info">
+                            <h3>JLPT N2 Certification</h3>
+                            <span class="date">February 2016</span>
+                            <p>Japanese Government issued 2nd Highest Level Language Proficiency Exam</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="mailto:nikkiravi@yahoo.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/nikkiravi" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/nikitaravi0519" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <p>&copy; 2025 Nikita Ravi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
 </html>
