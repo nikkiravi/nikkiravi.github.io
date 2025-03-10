@@ -262,3 +262,51 @@ nav a:hover {
   height: 100%;
   transition: width 1.5s ease-out;
 }
+
+/* NEW TIMELINE STYLES to match the screenshot */
+.timeline {
+  margin: 40px 0;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+/* Accent line on the left of each timeline card */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--accent-color);
+  border-radius: 5px;
+}
+
+/* Dot near the top of each card */
+.timeline-dot {
+  position: absolute;
+  left: -6px;
+  top: 20px; /* aligns with the top content */
+  width: 16px;
+  height: 16px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+
+/* Shift main content to the right so it doesn't overlap the accent line */
+.timeline-content {
+  margin-left: 20px;
+}
+
+.timeline-date {
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  color: var(--primary-color);
+}

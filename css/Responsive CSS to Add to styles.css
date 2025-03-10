@@ -1,41 +1,6 @@
 /* Additional responsive styles to add to your styles.css file */
 
-/* Experience Timeline Styles */
-.timeline {
-    position: relative;
-    margin: 40px 0;
-    padding-left: 30px;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 2px;
-    background-color: rgba(74, 111, 165, 0.2);
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 40px;
-}
-
-.timeline-date {
-    font-weight: 600;
-    color: var(--secondary-color);
-    margin-bottom: 8px;
-    margin-left: 30px; /* Increased margin to push text away from dot */
-}
-
-.timeline-content {
-    background-color: white;
-    border-radius: var(--border-radius);
-    padding: 20px;
-    box-shadow: var(--shadow);
-    margin-left: 30px; /* Extra space so the dot isn't too close */
-}
+/* --- Removed old .timeline code to avoid conflicts with new timeline design --- */
 
 /* Project Card Styles */
 .projects-grid {
@@ -238,16 +203,6 @@ footer {
     
     .certification-items {
         grid-template-columns: 1fr;
-    }
-    
-    .timeline {
-        padding-left: 20px;
-    }
-    
-    .timeline-dot {
-        width: 10px;
-        height: 10px;
-        left: -5px;
     }
 }
 

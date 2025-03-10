@@ -39,21 +39,11 @@
   animation-play-state: running;
 }
 
-/* Timeline dot pulse animation */
+/* Timeline dot pulse animation (optional) */
 @keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.2); opacity: 0.7; }
+  0%   { transform: scale(1); opacity: 1; }
+  50%  { transform: scale(1.2); opacity: 0.7; }
   100% { transform: scale(1); opacity: 1; }
-}
-
-.timeline-dot {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  background-color: var(--primary-color);
-  border-radius: 50%;
-  left: -6px;
-  top: 24px;
 }
 
 .timeline-item:hover .timeline-dot {
