@@ -183,6 +183,11 @@ nav a:hover {
   color: var(--primary-color);
 }
 
+header nav {
+  position: relative;
+  z-index: 1001;
+}
+
 .download-btn {
   background-color: var(--primary-color);
   color: white !important;
@@ -240,4 +245,20 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+/* Add a background and set a fixed height for the progress bar container */
+.skill-bar {
+  background-color: #e0e0e0; /* a light grey background */
+  border-radius: 4px;
+  overflow: hidden;
+  height: 10px;            /* adjust height as needed */
+  margin-top: 5px;
+}
+
+/* Style the filling level of the progress bar */
+.skill-level {
+  background-color: var(--primary-color); /* uses your primary blue */
+  height: 100%;
+  transition: width 1.5s ease-out;
 }
