@@ -164,6 +164,12 @@ nav {
   padding-top: 15px;
 }
 
+/* Ensure navigation stays on top */
+header nav {
+  position: relative;
+  z-index: 1001;
+}
+
 nav ul {
   display: flex;
   gap: 20px;
@@ -181,11 +187,6 @@ nav a {
 nav a:hover {
   background-color: rgba(74, 111, 165, 0.1);
   color: var(--primary-color);
-}
-
-header nav {
-  position: relative;
-  z-index: 1001;
 }
 
 .download-btn {
@@ -247,18 +248,17 @@ header nav {
   gap: 5px;
 }
 
-/* Add a background and set a fixed height for the progress bar container */
+/* Skills Progress Bar Styles */
 .skill-bar {
-  background-color: #e0e0e0; /* a light grey background */
+  background-color: #e0e0e0;
   border-radius: 4px;
   overflow: hidden;
-  height: 10px;            /* adjust height as needed */
+  height: 10px;
   margin-top: 5px;
 }
 
-/* Style the filling level of the progress bar */
 .skill-level {
-  background-color: var(--primary-color); /* uses your primary blue */
+  background-color: var(--primary-color);
   height: 100%;
   transition: width 1.5s ease-out;
 }
