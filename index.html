@@ -3,284 +3,747 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikita Ravi | Software Engineer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Animations CSS -->
-    <link rel="stylesheet" href="css/animations.css">
+    <title>Nikita Ravi | Software Engineer & AI/ML Specialist</title>
+    <style>
+        :root {
+            --primary-color: #4a6da7;
+            --secondary-color: #6c9cb0;
+            --dark-color: #2d3e50;
+            --light-color: #f4f6f9;
+            --gray-color: #e9ecef;
+            --text-color: #333;
+            --white-color: #fff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--white-color);
+            padding: 30px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-color);
+            font-size: 40px;
+            border: 3px solid var(--primary-color);
+        }
+        
+        .profile-info h1 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .profile-info h2 {
+            color: var(--secondary-color);
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: var(--white-color);
+            padding: 15px 0;
+            border-bottom: 1px solid var(--gray-color);
+            margin-bottom: 30px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style-type: none;
+            gap: 30px;
+        }
+        
+        .nav-links li a {
+            color: var(--text-color);
+            font-weight: 500;
+            padding: 8px 0;
+            transition: color 0.3s;
+        }
+        
+        .nav-links li a:hover {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .nav-links .download-btn {
+            margin-left: auto;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-links .download-btn:hover {
+            background-color: #3a5a8a;
+        }
+        
+        /* Section Styles */
+        section {
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        /* About Section */
+        .about {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 50px;
+        }
+        
+        .about h2 {
+            color: white;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .about p {
+            margin-bottom: 15px;
+        }
+        
+        /* Skills Section */
+        .skills-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .skill-card {
+            background-color: var(--white-color);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .skill-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--gray-color);
+        }
+        
+        .skill-item {
+            margin-bottom: 15px;
+        }
+        
+        .skill-name {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .skill-bar {
+            height: 10px;
+            background-color: var(--gray-color);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        .language-pill {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background-color: var(--gray-color);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--secondary-color);
+            border: 3px solid var(--white-color);
+            z-index: 1;
+        }
+        
+        .timeline-date {
+            font-size: 14px;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+        
+        .timeline-title {
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+        
+        .timeline-company {
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content {
+            background-color: var(--white-color);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-content ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .timeline-content li {
+            margin-bottom: 8px;
+        }
+        
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background-color: var(--white-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-image {
+            height: 180px;
+            background-color: var(--gray-color);
+        }
+        
+        .project-details {
+            padding: 20px;
+            flex: 1;
+        }
+        
+        .project-title {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        .project-tech {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .tech-tag {
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .project-description {
+            margin-bottom: 15px;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .project-links a {
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        /* Publications Section */
+        .publications-list {
+            background-color: var(--white-color);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .publication-item {
+            padding: 20px;
+            border-bottom: 1px solid var(--gray-color);
+        }
+        
+        .publication-item:last-child {
+            border-bottom: none;
+        }
+        
+        .publication-title {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        .publication-authors {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .publication-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        
+        /* Education Section */
+        .education-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .education-item {
+            background-color: var(--white-color);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .education-logo {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--gray-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .education-logo img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        .education-details {
+            flex: 1;
+        }
+        
+        .education-school {
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+        
+        .education-degree {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .education-period {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .coursework {
+            margin-top: 20px;
+        }
+        
+        .coursework-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        
+        .course-tag {
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 13px;
+        }
+        
+        /* Certifications Section */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .certification-card {
+            background-color: var(--white-color);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            gap: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .certification-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+        }
+        
+        .certification-details {
+            flex: 1;
+        }
+        
+        .certification-title {
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+        
+        .certification-date {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .certification-description {
+            font-size: 14px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-info {
+                justify-content: center;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-links .download-btn {
+                margin-left: 0;
+                text-align: center;
+                margin-top: 10px;
+            }
+            
+            .skills-container,
+            .projects-grid,
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .education-item {
+                flex-direction: column;
+            }
+            
+            .education-logo {
+                margin: 0 auto;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="profile-section">
-                <div class="profile-image">
-                    <!-- Replace with your actual profile image -->
-                    <img src="assets/profile.jpg" alt="Nikita Ravi">
-                </div>
+            <div class="profile-header">
+                <div class="profile-image">NR</div>
                 <div class="profile-info">
                     <h1>Nikita Ravi</h1>
                     <h2>Software Engineer | AI/ML Specialist</h2>
-                    <div class="contact-links">
-                        <a href="mailto:nikkiravi@yahoo.com" aria-label="Email">
-                            <i class="fas fa-envelope"></i> nikkiravi@yahoo.com
-                        </a>
-                        <a href="tel:+17654142419" aria-label="Phone">
-                            <i class="fas fa-phone"></i> (765)-414-2419
-                        </a>
-                        <a href="https://github.com/nikkiravi" target="_blank" aria-label="GitHub">
-                            <i class="fab fa-github"></i> github.com/nikkiravi
-                        </a>
-                        <a href="https://linkedin.com/in/nikitaravi0519" target="_blank" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i> linkedin.com/in/nikitaravi0519
-                        </a>
+                    <div class="contact-info">
+                        <a href="mailto:nikkiravi@yahoo.com">nikkiravi@yahoo.com</a>
+                        <a href="tel:7654142419">(765)-414-2419</a>
+                        <a href="https://github.com/nikkiravi" target="_blank">github.com/nikkiravi</a>
+                        <a href="https://linkedin.com/in/nikitaravi0519" target="_blank">linkedin.com/in/nikitaravi0519</a>
                     </div>
                 </div>
             </div>
-            <nav>
-                <ul id="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#publications">Publications</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li>
-                        <a href="assets/resume.pdf"
-                           download="Nikita_Ravi_Resume.pdf"
-                           class="download-btn"
-                        >Download Resume</a>
-                    </li>
-                </ul>
-                <div class="mobile-nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
         </div>
     </header>
-
-    <main>
-        <section id="about" class="fade-in">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>I'm a Software Engineer with expertise in AI, Machine Learning, and Computer Vision. With a Master's in Computer Engineering from Purdue University, I leverage cutting-edge technologies to build intelligent solutions. Currently working at Salesforce, I develop AI agents and implement automated health monitoring systems to enhance customer experiences.</p>
-                <p>My background encompasses both software engineering and research, with experience in fine-tuning language models, developing computer vision pipelines, and creating reproducible ML solutions.</p>
-            </div>
+    
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="https://drive.google.com/file/d/1/view" class="download-btn" target="_blank">Download Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>I'm a Software Engineer with expertise in AI, Machine Learning, and Computer Vision. With a Master's in Computer Engineering from Purdue University, I leverage cutting-edge technologies to build intelligent solutions. Currently working at Salesforce, I develop AI agents and implement automated health monitoring systems to enhance customer experiences.</p>
+            <p>My background encompasses both software engineering and research, with experience in fine-tuning language models, developing computer vision pipelines, and creating reproducible ML solutions.</p>
         </section>
-
-        <section id="skills" class="slide-in">
-            <div class="container">
-                <h2>Skills</h2>
-                <div class="skills-container">
-                    <div class="skill-category">
-                        <h3>Programming Languages</h3>
-                        <div class="skill-items">
-                            <div class="skill-item" data-skill="Python">
-                                <span class="skill-name">Python</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 95%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="SQL">
-                                <span class="skill-name">SQL</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 90%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="Java">
-                                <span class="skill-name">Java</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 85%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="C">
-                                <span class="skill-name">C</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 80%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="MATLAB">
-                                <span class="skill-name">MATLAB</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 75%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="LaTeX">
-                                <span class="skill-name">LaTeX</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 70%;"></div>
-                                </div>
-                            </div>
+        
+        <section id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%;"></div>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h3>Machine Learning</h3>
-                        <div class="skill-items">
-                            <div class="skill-item" data-skill="PyTorch">
-                                <span class="skill-name">PyTorch</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 90%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="Tensorflow">
-                                <span class="skill-name">Tensorflow</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 85%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="HuggingFace">
-                                <span class="skill-name">HuggingFace</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 90%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="Langchain">
-                                <span class="skill-name">Langchain</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 80%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="OpenCV">
-                                <span class="skill-name">OpenCV</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 85%;"></div>
-                                </div>
-                            </div>
+                    <div class="skill-item">
+                        <span class="skill-name">SQL</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%;"></div>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h3>Tools</h3>
-                        <div class="skill-items">
-                            <div class="skill-item" data-skill="Git/GitHub">
-                                <span class="skill-name">Git/GitHub</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 90%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="Docker">
-                                <span class="skill-name">Docker</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 85%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="AWS Sagemaker">
-                                <span class="skill-name">AWS Sagemaker</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 80%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-skill="Unix Shell">
-                                <span class="skill-name">Unix Shell</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 90%;"></div>
-                                </div>
-                            </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Java</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%;"></div>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h3>Languages</h3>
-                        <div class="skill-items language-items">
-                            <div class="language-badge">English</div>
-                            <div class="language-badge">Japanese</div>
-                            <div class="language-badge">Telugu</div>
+                    <div class="skill-item">
+                        <span class="skill-name">C</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">MATLAB</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%;"></div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="experience" class="fade-in">
-            <div class="container">
-                <h2>Work Experience</h2>
-                <div class="timeline">
-                    <!-- 1st item -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">July 2024 - Present</div>
-                            <h3>Software Engineer</h3>
-                            <h4>Salesforce</h4>
-                            <ul>
-                                <li>Developed an AI agent that analyzes questions, retrieves relevant data/context, and delivers context-aware responses or visualizations, streamlining information access for customers.</li>
-                                <li>Implemented automated health checks in Python using SNMP to monitor network devices, detect issues, and trigger alerts for proactive maintenance.</li>
-                            </ul>
+                
+                <div class="skill-card">
+                    <h3>Machine Learning</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">PyTorch</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%;"></div>
                         </div>
                     </div>
-                    <!-- 2nd item -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">June 2023 - August 2023</div>
-                            <h3>Software Engineer Intern</h3>
-                            <h4>Salesforce</h4>
-                            <ul>
-                                <li>Fine-tuned an existing pre-trained causal LLM transformer for its text generation capabilities to answer any question pertaining to Salesforce's internal network health monitoring website.</li>
-                                <li>Experimented and fine-tuned different transformers like BERT, GPT2, Falcon, and Salesforce's own xgen models.</li>
-                                <li>Achieved an accuracy of 92.85%.</li>
-                            </ul>
+                    <div class="skill-item">
+                        <span class="skill-name">TensorFlow</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%;"></div>
                         </div>
                     </div>
-                    <!-- 3rd item -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">May 2022 - August 2022</div>
-                            <h3>Software Engineer Intern</h3>
-                            <h4>Salesforce</h4>
-                            <ul>
-                                <li>Trained a K-Means model to cluster network devices by their configurations using NLP TF-IDF computations.</li>
-                                <li>Displayed the clustering on a three-dimensional graph using a type of dimensionality reduction method called Principal Component Analysis.</li>
-                            </ul>
+                    <div class="skill-item">
+                        <span class="skill-name">HuggingFace</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%;"></div>
                         </div>
                     </div>
-                    <!-- 4th item -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">June 2021 - August 2021</div>
-                            <h3>DevOps Engineer Intern</h3>
-                            <h4>Lenovo</h4>
-                            <ul>
-                                <li>Implemented a software that effectively detects and redacts customer's PII and Lenovo's confidential data using Named Entity Recognition.</li>
-                            </ul>
+                    <div class="skill-item">
+                        <span class="skill-name">OpenCV</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%;"></div>
                         </div>
                     </div>
-                    <!-- 5th item -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">January 2020 - August 2020</div>
-                            <h3>User and Customer Experience Co-Op</h3>
-                            <h4>Lenovo</h4>
-                            <ul>
-                                <li>Wrote Django-admin commands to manage and update information, and send notifications to users regarding the status of their parts in Lenovo's internal inventory tool.</li>
-                                <li>Developed an ETL script to load customer experience data into a SQL server and identify trends.</li>
-                                <li>Trained a decision-tree model to predict the probability of Lenovo's customer support case getting resolved.</li>
-                            </ul>
+                    <div class="skill-item">
+                        <span class="skill-name">LangChain</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%;"></div>
                         </div>
                     </div>
                 </div>
+                
+                <div class="skill-card">
+                    <h3>Languages</h3>
+                    <div class="language-pill">English</div>
+                    <div class="language-pill">Japanese</div>
+                    <div class="language-pill">Telugu</div>
+                </div>
             </div>
         </section>
-
-        <section id="research" class="slide-in">
-            <div class="container">
-                <h2>Research Experience</h2>
-                <div class="research-items">
-                    <div class="research-item">
-                        <h3>SERIS Lab | Research Assistant</h3>
-                        <span class="date">August 2023 - May 2024</span>
+        
+        <section id="experience">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">July 2024 - Present</div>
+                    <h3 class="timeline-title">Software Engineer</h3>
+                    <div class="timeline-company">Salesforce</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Developed an AI agent that would analyze the question asked, retrieve relevant data/context, and deliver context-aware responses or visualizations, streamlining information access for customers.</li>
+                            <li>Implemented automated health checks in Python using SNMP to monitor network devices, detect issues, and trigger alerts for proactive maintenance.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">June 2023 - August 2023</div>
+                    <h3 class="timeline-title">Software Engineer Intern</h3>
+                    <div class="timeline-company">Salesforce</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Fine-tuned an existing pre-trained causal LLM transformer for its text generation capabilities to answer any question pertaining to Salesforce's internal network health monitoring website.</li>
+                            <li>Experimented and fine-tuned different transformers like BERT, GPT2, Falcon, and Salesforce's own xgen models.</li>
+                            <li>Achieved an accuracy of 92.85%.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">May 2022 - August 2022</div>
+                    <h3 class="timeline-title">Software Engineer Intern</h3>
+                    <div class="timeline-company">Salesforce</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Trained a K-Means model to cluster network devices by their configurations using NLP TF-IDF computations.</li>
+                            <li>Displayed the clustering on a three-dimensional graph using a type of dimensionality reduction method called Principal Component Analysis.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">June 2021 - August 2021</div>
+                    <h3 class="timeline-title">DevOps Engineer Intern</h3>
+                    <div class="timeline-company">Lenovo</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Implemented a software that effectively detects and redacts customer's PII and Lenovo's confidential data using Named Entity Recognition.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">January 2020 - August 2020</div>
+                    <h3 class="timeline-title">User and Customer Experience Co-Op</h3>
+                    <div class="timeline-company">Lenovo</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Wrote Django-admin commands to manage and update information, and send notifications to users regarding the status of their parts in Lenovo's internal inventory tool.</li>
+                            <li>Developed an ETL script to load customer experience data into a SQL server and identify trends.</li>
+                            <li>Trained a decision-tree model to predict the probability of Lenovo's customer support case getting resolved.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">August 2023 - May 2024</div>
+                    <h3 class="timeline-title">Research Assistant</h3>
+                    <div class="timeline-company">SERIS Lab</div>
+                    <div class="timeline-content">
                         <ul>
                             <li>Explored the reproducibility crisis and surveyed methodologies to enhance the reproducibility of training cutting-edge deep learning software.</li>
                             <li>Improved the reproducibility of training and evaluating an efficient and low-powered computer vision model known as the Tree-Based Unidirectional Neural Network (TRUNK).</li>
                         </ul>
                     </div>
-                    <div class="research-item">
-                        <h3>Probabilistic and Understandable Machine Learning Lab | Research Assistant</h3>
-                        <span class="date">January 2022 - May 2022</span>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">January 2022 - May 2022</div>
+                    <h3 class="timeline-title">Research Assistant</h3>
+                    <div class="timeline-company">Probabilistic and Understandable Machine Learning Lab</div>
+                    <div class="timeline-content">
                         <ul>
                             <li>Constructed a StarCraft II Benchmark dataset that is easily accessible and useable for ML projects.</li>
                             <li>Trained the ResNet-18 Network to predict the number of casualties from a specific frame of the game.</li>
@@ -289,203 +752,169 @@
                 </div>
             </div>
         </section>
-
-        <section id="education" class="fade-in">
-            <div class="container">
-                <h2>Education</h2>
-                <div class="education-items">
-                    <div class="education-item">
-                        <div class="education-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Purdue_Signature.svg/1280px-Purdue_Signature.svg.png" alt="Purdue University">
+        
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <div class="project-details">
+                        <h3 class="project-title">Computer Vision Pipeline for the Lunar Rover</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">ROS</span>
+                            <span class="tech-tag">Git</span>
+                            <span class="tech-tag">Unix Shell</span>
                         </div>
-                        <div class="education-info">
-                            <h3>Purdue University</h3>
-                            <p>M.S. Computer Engineering</p>
-                            <span class="date">August 2022 - May 2024</span>
-                        </div>
-                    </div>
-                    <div class="education-item">
-                        <div class="education-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Purdue_Signature.svg/1280px-Purdue_Signature.svg.png" alt="Purdue University">
-                        </div>
-                        <div class="education-info">
-                            <h3>Purdue University</h3>
-                            <p>B.S. Computer Engineering</p>
-                            <span class="date">August 2018 - December 2022</span>
+                        <p class="project-description">Developed a computer vision pipeline to transform lunar rover images into a bird's-eye view perspective. Engineered a multi-step process involving image deblurring, semantic segmentation, and perspective transformation. Utilized DeblurGAN-v2, Detectron, and uNetXST to enhance image processing and accuracy.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/nikkiravi/lunar-rover-cv" target="_blank">Source Code</a>
+                            <a href="#demo">Demo</a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="coursework">
-                    <h3>Relevant Coursework</h3>
-                    <div class="course-tags">
-                        <span class="course-tag">Artificial Intelligence</span>
-                        <span class="course-tag">Computer Vision</span>
-                        <span class="course-tag">Deep Learning</span>
-                        <span class="course-tag">Statistical Machine Learning</span>
-                        <span class="course-tag">Natural Language Processing</span>
-                        <span class="course-tag">Python for Data Science</span>
-                        <span class="course-tag">Data Structures and Algorithms</span>
-                        <span class="course-tag">Object Oriented Programming in Java</span>
-                        <span class="course-tag">Computer and Network Security</span>
-                        <span class="course-tag">Quantum Computing</span>
-                        <span class="course-tag">Random Variables and Signals</span>
-                        <span class="course-tag">Differential Equations</span>
-                        <span class="course-tag">Linear Algebra</span>
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <div class="project-details">
+                        <h3 class="project-title">Classifying Short Sentences</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">BiLSTM</span>
+                        </div>
+                        <p class="project-description">Implemented a BiLSTM-based NLP model with attention mechanisms, linear, and convolutional layers for classifying short sentences. Reproduced and optimized an academic research paper, refining architecture, training, and evaluation techniques.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/nikkiravi/sentence-classification" target="_blank">Source Code</a>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="awards">
-                    <h3>Awards</h3>
-                    <div class="award-tags">
-                        <span class="award-tag">Dean's Honor List</span>
-                        <span class="award-tag">Semester Honors</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="publications" class="slide-in">
-            <div class="container">
-                <h2>Publications</h2>
-                <div class="publication-items">
-                    <div class="publication-item">
-                        <h3>[In Progress] Improving the Reproducibility of Deep Learning Software: A Case Study Analysis</h3>
-                        <p class="authors">N. Ravi, A. Goel</p>
-                    </div>
-                    <div class="publication-item">
-                        <h3>Advancing Low-Power Computer Vision at the Edge</h3>
-                        <p class="authors">A. Goel, C. Tung, N. Eliopolous, N. Ravi, N. Synovic, I. Ahlgren, J. West, G. K. Thiravathukal, J. C. Davis, Y.-H. Lu</p>
-                        <a href="#" class="publication-link">[Link]</a>
-                    </div>
-                    <div class="publication-item">
-                        <h3>A Musician's Muse: Detecting Performance Errors with Transformers</h3>
-                        <p class="authors">B. Chou, P. Jajal, N. J. Eliopoulos, T. Nadolsky, C.-Y. Yang, N. Ravi, J. C. Davis, K. Y.-J. Yun, Y. Lu</p>
-                        <p class="publication-venue">AAAI Submission</p>
-                        <a href="#" class="publication-link">[Link]</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="fade-in">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/project-images/lunar-rover.jpg" alt="Lunar Rover Project">
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <div class="project-details">
+                        <h3 class="project-title">Rogue Game</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Git</span>
+                            <span class="tech-tag">Unix Shell</span>
                         </div>
-                        <div class="project-info">
-                            <h3>Computer Vision Pipeline for the Lunar Rover</h3>
-                            <div class="project-tech">
-                                <span>PyTorch</span>
-                                <span>ROS</span>
-                                <span>Git</span>
-                                <span>Unix Shell</span>
-                            </div>
-                            <p>Developed a computer vision pipeline to transform lunar rover images into a bird's-eye view perspective, engineering a multi-step process involving image deblurring, semantic segmentation, and perspective transformation.</p>
-                            <div class="project-links">
-                                <!-- Add links when available -->
-                                <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/project-images/sentence-classifier.jpg" alt="Sentence Classifier Project">
-                        </div>
-                        <div class="project-info">
-                            <h3>Classifying Short Sentences</h3>
-                            <div class="project-tech">
-                                <span>PyTorch</span>
-                                <span>Git</span>
-                                <span>Unix Shell</span>
-                            </div>
-                            <p>Implemented a BiLSTM-based NLP model with attention mechanisms, linear, and convolutional layers for classifying short sentences, reproducing and optimizing an academic research paper.</p>
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/project-images/rogue-game.jpg" alt="Rogue Game Project">
-                        </div>
-                        <div class="project-info">
-                            <h3>Rogue Game</h3>
-                            <div class="project-tech">
-                                <span>Java</span>
-                                <span>Git</span>
-                                <span>Unix Shell</span>
-                            </div>
-                            <p>Developed a text-based RPG inspired by the 1980 Rogue game, featuring procedural elements. Parsed XML files to extract and manage in-game data and integrated key bindings for movement and combat mechanics.</p>
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                                <a href="#" class="project-link"><i class="fas fa-gamepad"></i> Play</a>
-                            </div>
+                        <p class="project-description">Developed a text-based RPG inspired by the 1980 Rogue game, featuring procedural elements. Parsed XML files to extract and manage in-game data for maps, weapons, and monsters. Integrated key bindings for movement and combat mechanics, enhancing gameplay interactivity.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/nikkiravi/rogue-game" target="_blank">Source Code</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="certifications" class="slide-in">
-            <div class="container">
-                <h2>Certifications</h2>
-                <div class="certification-items">
-                    <div class="certification-item">
-                        <div class="certification-logo">
-                            <i class="fab fa-google"></i>
+        
+        <section id="publications">
+            <h2 class="section-title">Publications</h2>
+            <div class="publications-list">
+                <div class="publication-item">
+                    <h3 class="publication-title">[In Progress] Improving the Reproducibility of Deep Learning Software: A Case Study Analysis</h3>
+                    <p class="publication-authors">N. Ravi, A. Goel</p>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">Advancing Low-Power Computer Vision at the Edge</h3>
+                    <p class="publication-authors">A. Goel, C. Tung, N. Eliopoulos, N. Ravi, N. Synovic, I. Ahlgren, J. West, G. K. Thiravathukal, J. C. Davis, Y.-H. Lu</p>
+                    <a href="#" class="publication-link">Link</a>
+                </div>
+                
+                <div class="publication-item">
+                    <h3 class="publication-title">A Musician's Muse: Detecting Performance Errors with Transformers</h3>
+                    <p class="publication-authors">B. Chou, P. Jajal, N. J. Eliopoulos, T. Nadolsky, C.-Y. Yang, N. Ravi, J. C. Davis, K. Y.-J. Yun, Y. Lu</p>
+                    <p>AAAI Submission</p>
+                    <a href="#" class="publication-link">Link</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="education-list">
+                <div class="education-item">
+                    <div class="education-logo">
+                        <img src="/api/placeholder/60/60" alt="Purdue University">
+                    </div>
+                    <div class="education-details">
+                        <h3 class="education-school">Purdue University</h3>
+                        <p class="education-degree">M.S. Computer Engineering</p>
+                        <p class="education-period">August 2022 - May 2024</p>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-logo">
+                        <img src="/api/placeholder/60/60" alt="Purdue University">
+                    </div>
+                    <div class="education-details">
+                        <h3 class="education-school">Purdue University</h3>
+                        <p class="education-degree">B.S. Computer Engineering</p>
+                        <p class="education-period">August 2018 - December 2022</p>
+                        
+                        <div class="coursework">
+                            <h4>Key Coursework:</h4>
+                            <div class="coursework-tags">
+                                <span class="course-tag">Artificial Intelligence</span>
+                                <span class="course-tag">Computer Vision</span>
+                                <span class="course-tag">Deep Learning</span>
+                                <span class="course-tag">Statistical Machine Learning</span>
+                                <span class="course-tag">Natural Language Processing</span>
+                                <span class="course-tag">Python for Data Science</span>
+                                <span class="course-tag">Data Structures & Algorithms</span>
+                                <span class="course-tag">Computer & Network Security</span>
+                                <span class="course-tag">Quantum Computing</span>
+                            </div>
                         </div>
-                        <div class="certification-info">
-                            <h3>Google Generative AI Certification</h3>
-                            <span class="date">June 2023</span>
-                            <p>Covered LLMs, Attention Mechanisms, Intro to BERT</p>
+                        
+                        <div class="awards">
+                            <h4>Awards:</h4>
+                            <p>Dean's Honor List, Semester Honors</p>
                         </div>
                     </div>
-                    <div class="certification-item">
-                        <div class="certification-logo">
-                            <i class="fab fa-ibm"></i>
-                        </div>
-                        <div class="certification-info">
-                            <h3>IBM Data Science Professional Certification</h3>
-                            <span class="date">August 2019</span>
-                            <p>Covered Database and SQL, Data Analysis, and Machine Learning</p>
-                        </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="certifications">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="certification-logo"></div>
+                    <div class="certification-details">
+                        <h3 class="certification-title">Google Generative AI Certification</h3>
+                        <p class="certification-date">June 2023</p>
+                        <p class="certification-description">Covered LLMs, Attention Mechanisms, Intro to BERT</p>
                     </div>
-                    <div class="certification-item">
-                        <div class="certification-logo">
-                            <i class="fas fa-language"></i>
-                        </div>
-                        <div class="certification-info">
-                            <h3>JLPT N2 Certification</h3>
-                            <span class="date">February 2016</span>
-                            <p>Japanese Government issued 2nd Highest Level Language Proficiency Exam</p>
-                        </div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-logo"></div>
+                    <div class="certification-details">
+                        <h3 class="certification-title">IBM Data Science Professional Certification</h3>
+                        <p class="certification-date">August 2019</p>
+                        <p class="certification-description">Covered Database and SQL, Data Analysis, and Machine Learning</p>
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-logo"></div>
+                    <div class="certification-details">
+                        <h3 class="certification-title">JLPT N2 Certification</h3>
+                        <p class="certification-date">February 2016</p>
+                        <p class="certification-description">Japanese Government issued 2nd Highest Level Language Proficiency Exam</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
+    
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="mailto:nikkiravi@yahoo.com"><i class="fas fa-envelope"></i></a>
-                    <a href="https://github.com/nikkiravi" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/nikitaravi0519" target="_blank"><i class="fab fa-linkedin"></i></a>
-                </div>
-                <p>&copy; 2025 Nikita Ravi. All rights reserved.</p>
-            </div>
+            <p>&copy; 2025 Nikita Ravi. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Main JS -->
-    <script src="js/main.js"></script>
-    <!-- Animations JS -->
-    <script src="js/animations.js"></script>
 </body>
 </html>
