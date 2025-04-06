@@ -551,7 +551,57 @@
                 margin: 0 auto;
             }
         }
-    </style>
+    
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation Classes */
+.animate {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+/* Hover Effects */
+.project-card:hover,
+.certification-card:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+</style>
 </head>
 <body>
     <header>
@@ -593,7 +643,7 @@
             <p>My background encompasses both software engineering and research, with experience in fine-tuning language models, developing computer vision pipelines, and creating reproducible ML solutions.</p>
         </section>
         
-        <section id="skills">
+        <section id="skills" class="animate">
             <h2 class="section-title">Skills</h2>
             <div class="skills-container">
                 <div class="skill-card">
@@ -688,10 +738,10 @@
             </div>
         </section>
         
-        <section id="experience">
+        <section id="experience" class="animate">
             <h2 class="section-title">Work Experience</h2>
             <div class="timeline">
-                <div class="timeline-item">
+                <div class="timeline-item animate slide-in-left">
                     <div class="timeline-date">July 2024 - Present</div>
                     <h3 class="timeline-title">Software Engineer</h3>
                     <div class="timeline-company">Salesforce</div>
@@ -703,7 +753,7 @@
                     </div>
                 </div>
                 
-                <div class="timeline-item">
+                <div class="timeline-item animate slide-in-left">
                     <div class="timeline-date">June 2023 - August 2023</div>
                     <h3 class="timeline-title">Software Engineer Intern</h3>
                     <div class="timeline-company">Salesforce</div>
@@ -716,7 +766,7 @@
                     </div>
                 </div>
                 
-                <div class="timeline-item">
+                <div class="timeline-item animate slide-in-left">
                     <div class="timeline-date">May 2022 - August 2022</div>
                     <h3 class="timeline-title">Software Engineer Intern</h3>
                     <div class="timeline-company">Salesforce</div>
@@ -728,7 +778,7 @@
                     </div>
                 </div>
                 
-                <div class="timeline-item">
+                <div class="timeline-item animate slide-in-left">
                     <div class="timeline-date">June 2021 - August 2021</div>
                     <h3 class="timeline-title">DevOps Engineer Intern</h3>
                     <div class="timeline-company">Lenovo</div>
@@ -739,7 +789,7 @@
                     </div>
                 </div>
                 
-                <div class="timeline-item">
+                <div class="timeline-item animate slide-in-left">
                     <div class="timeline-date">January 2020 - August 2020</div>
                     <h3 class="timeline-title">User and Customer Experience Co-Op</h3>
                     <div class="timeline-company">Lenovo</div>
@@ -752,7 +802,7 @@
                     </div>
                 </div>
                 
-                <div class="timeline-item">
+                <div class="timeline-item animate slide-in-left">
                     <div class="timeline-date">August 2023 - May 2024</div>
                     <h3 class="timeline-title">Research Assistant</h3>
                     <div class="timeline-company">SERIS Lab</div>
@@ -764,7 +814,7 @@
                     </div>
                 </div>
                 
-                <div class="timeline-item">
+                <div class="timeline-item animate slide-in-left">
                     <div class="timeline-date">January 2022 - May 2022</div>
                     <h3 class="timeline-title">Research Assistant</h3>
                     <div class="timeline-company">Probabilistic and Understandable Machine Learning Lab</div>
@@ -778,7 +828,7 @@
             </div>
         </section>
         
-        <section id="projects">
+        <section id="projects" class="animate">
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
@@ -861,7 +911,7 @@
             </div>
         </section>
         
-        <section id="education">
+        <section id="education" class="animate">
             <h2 class="section-title">Education</h2>
             <div class="education-list">
                 <div class="education-item">
@@ -914,7 +964,7 @@
             </div>
         </section>
         
-        <section id="certifications">
+        <section id="certifications" class="animate">
             <h2 class="section-title">Certifications</h2>
             <div class="certifications-grid">
                 <div class="certification-card">
@@ -958,5 +1008,26 @@
             <p>&copy; 2025 Nikita Ravi. All rights reserved.</p>
         </div>
     </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const animatedElements = document.querySelectorAll(".animate");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in-up");
+                entry.target.classList.remove("animate");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    animatedElements.forEach(el => observer.observe(el));
+});
+</script>
+
 </body>
 </html>
